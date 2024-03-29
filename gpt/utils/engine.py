@@ -1,10 +1,10 @@
-import torch
-import pandas as pd
+from pathlib import Path
 
+import pandas as pd
+import torch
 from torch import nn
 from torch.utils.data import DataLoader, Dataset
 from tqdm.auto import tqdm
-from pathlib import Path
 
 SAVE_CHECKPOINT_INTERVAL = 10
 TEST_PROMPT = "Once upon a time"

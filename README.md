@@ -18,7 +18,7 @@ This repository is my personal attempt at learning how to build a GPT-like model
 A makefile is include in the project that will create the virtual environment and install the dependencies.
 
 ```bash
-make install
+make
 ```
 
 > Note: Reload VSCode using the command palette `Developer: Reload Window` to allow the virtual environment to be auto-selected.

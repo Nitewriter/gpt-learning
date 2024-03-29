@@ -1,6 +1,7 @@
+from pathlib import Path
+
 import torch
 from torch.utils.data import Dataset
-from pathlib import Path
 
 
 class CharacterLevelTextDataset(Dataset):

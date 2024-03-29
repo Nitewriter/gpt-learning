@@ -1,8 +1,9 @@
-import torch
-from torch.utils.data import Dataset, DataLoader
 from collections import Counter
-from nltk.tokenize import word_tokenize
 from pathlib import Path
+
+import torch
+from nltk.tokenize import word_tokenize
+from torch.utils.data import Dataset
 
 
 class WordLevelTextDataset(Dataset):
