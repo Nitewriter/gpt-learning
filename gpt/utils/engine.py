@@ -102,13 +102,13 @@ def train(
             dataloader, desc=f"Epoch {epoch + 1}/{epochs}"
         ):
             total_loss += train_step(
-                model,
-                vocab_size,
-                criterion,
-                optimizer,
-                batch_inputs,
-                batch_targets,
-                device,
+                model=model,
+                vocab_size=vocab_size,
+                criterion=criterion,
+                optimizer=optimizer,
+                batch_inputs=batch_inputs,
+                batch_targets=batch_targets,
+                device=device,
             )
 
             num_batches += 1
@@ -118,15 +118,15 @@ def train(
 
         # Save the model checkpoint every 10 epochs
         if save_path and (epoch + 1) % SAVE_CHECKPOINT_INTERVAL == 0:
-            file_path = save_path / f"gpt2_epoch_{epoch + 1}.pt"
+            file_path = save_path / f"gpt2_epoch_{epoch + 1}.pth"
             print(f"Saving model checkpoint to {file_path}")
             torch.save(model.state_dict(), file_path)
 
-        generated_output = test_step(model, dataset, device)
+        generated_output = test_step(model=model, dataset=dataset, device=device)
         print(f"Epoch {epoch + 1}/{epochs}, Generated Output: {generated_output}")
 
     if save_path:
         time_stamp = pd.Timestamp.now().strftime("%Y%m%d%H%M%S")
-        file_path = save_path / f"gpt2_{time_stamp}.pt"
+        file_path = save_path / f"gpt2_{time_stamp}.pth"
         print(f"Saving final model to {file_path}")
         torch.save(model.state_dict(), file_path)
