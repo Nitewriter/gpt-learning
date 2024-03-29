@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "gpt-learning"
+version = "0.1.0"
+description = "Learning to build a GPT-like model"
+authors = ["Joel Garrett <joel.garrett@willowtreeapps.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.2.2"
+nltk = "^3.8.1"
+tqdm = "^4.66.2"
+torchinfo = "^1.8.0"
+numpy = "^1.26.4"
+pandas = "^2.2.1"
+matplotlib = "^3.8.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
