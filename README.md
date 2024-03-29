@@ -15,11 +15,10 @@ This repository is my personal attempt at learning how to build a GPT-like model
 
 ## Installation
 
-1. Create a virtual environment using the VSCode command palette: `Python: Create Environment...`
-2. Select `Venv` and choose a Python interpreter.
-3. Open the integrated terminal and run the following commands:
+A makefile is include in the project that will create the virtual environment and install the dependencies.
 
 ```bash
-pip install poetry
-poetry install
+make install
 ```
+
+> Note: Reload VSCode using the command palette `Developer: Reload Window` to allow the virtual environment to be auto-selected.
