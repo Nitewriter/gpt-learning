@@ -1,7 +1,7 @@
 ==========================================================================================
 Layer (type:depth-idx)                   Output Shape              Param #
 ==========================================================================================
-GPT2                                     [1, 3, 62]                --
+GPTLanguageModel                         [1, 3, 62]                --
 ├─Embedding: 1-1                         [1, 3, 128]               7,936
 ├─Embedding: 1-2                         [1, 3, 128]               128,000
 ├─ModuleList: 1-3                        --                        --
@@ -33,44 +33,16 @@ GPT2                                     [1, 3, 62]                --
 │    │    └─Sequential: 3-22             [1, 3, 128]               65,920
 │    │    └─LayerNorm: 3-23              [1, 3, 128]               256
 │    │    └─Dropout: 3-24                [1, 3, 128]               --
-│    └─TransformerBlock: 2-5             [1, 3, 128]               --
-│    │    └─MultiHeadAttention: 3-25     [1, 3, 128]               66,048
-│    │    └─LayerNorm: 3-26              [1, 3, 128]               256
-│    │    └─Dropout: 3-27                [1, 3, 128]               --
-│    │    └─Sequential: 3-28             [1, 3, 128]               65,920
-│    │    └─LayerNorm: 3-29              [1, 3, 128]               256
-│    │    └─Dropout: 3-30                [1, 3, 128]               --
-│    └─TransformerBlock: 2-6             [1, 3, 128]               --
-│    │    └─MultiHeadAttention: 3-31     [1, 3, 128]               66,048
-│    │    └─LayerNorm: 3-32              [1, 3, 128]               256
-│    │    └─Dropout: 3-33                [1, 3, 128]               --
-│    │    └─Sequential: 3-34             [1, 3, 128]               65,920
-│    │    └─LayerNorm: 3-35              [1, 3, 128]               256
-│    │    └─Dropout: 3-36                [1, 3, 128]               --
-│    └─TransformerBlock: 2-7             [1, 3, 128]               --
-│    │    └─MultiHeadAttention: 3-37     [1, 3, 128]               66,048
-│    │    └─LayerNorm: 3-38              [1, 3, 128]               256
-│    │    └─Dropout: 3-39                [1, 3, 128]               --
-│    │    └─Sequential: 3-40             [1, 3, 128]               65,920
-│    │    └─LayerNorm: 3-41              [1, 3, 128]               256
-│    │    └─Dropout: 3-42                [1, 3, 128]               --
-│    └─TransformerBlock: 2-8             [1, 3, 128]               --
-│    │    └─MultiHeadAttention: 3-43     [1, 3, 128]               66,048
-│    │    └─LayerNorm: 3-44              [1, 3, 128]               256
-│    │    └─Dropout: 3-45                [1, 3, 128]               --
-│    │    └─Sequential: 3-46             [1, 3, 128]               65,920
-│    │    └─LayerNorm: 3-47              [1, 3, 128]               256
-│    │    └─Dropout: 3-48                [1, 3, 128]               --
 ├─LayerNorm: 1-4                         [1, 3, 128]               256
 ├─Linear: 1-5                            [1, 3, 62]                7,998
 ==========================================================================================
-Total params: 1,204,030
-Trainable params: 1,204,030
+Total params: 674,110
+Trainable params: 674,110
 Non-trainable params: 0
-Total mult-adds (M): 1.20
+Total mult-adds (M): 0.67
 ==========================================================================================
 Input size (MB): 0.00
-Forward/backward pass size (MB): 0.23
-Params size (MB): 4.82
-Estimated Total Size (MB): 5.05
+Forward/backward pass size (MB): 0.12
+Params size (MB): 2.70
+Estimated Total Size (MB): 2.82
 ==========================================================================================

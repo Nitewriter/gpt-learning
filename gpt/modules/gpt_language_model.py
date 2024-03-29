@@ -4,7 +4,7 @@ import torch.nn as nn
 from .transformer_block import TransformerBlock
 
 
-class GPT2(nn.Module):
+class GPTLanguageModel(nn.Module):
     def __init__(
         self,
         vocab_size,
@@ -14,7 +14,7 @@ class GPT2(nn.Module):
         hidden_size,
         dropout=0.1,
     ):
-        super(GPT2, self).__init__()
+        super(GPTLanguageModel, self).__init__()
         self.token_embedding = nn.Embedding(vocab_size, embedding_size)
         self.positional_embedding = nn.Embedding(
             1000, embedding_size

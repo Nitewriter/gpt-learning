@@ -1,4 +1,10 @@
+# Python
 .venv
 dist
 __pycache__
+
+# PyTorch
 *.pth
+
+# macOS
+.DS_Store
